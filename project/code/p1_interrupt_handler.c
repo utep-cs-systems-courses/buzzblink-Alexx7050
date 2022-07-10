@@ -1,4 +1,4 @@
-include <msp430.h>
+#include <msp430.h>
 #include "switches.h"
 
 /* Switch on P2 (S2) */
