@@ -5,10 +5,12 @@
 #include "buzzer.h"
 
 void main(void){
-  configureClocks();
+  configureClocks();		/* setup master oscillator, CPU & peripheral clocks */
   
   led_init();
   switch_init();
+  
+  enableWDTInterrupts();	/* enable periodic interrupt */
   
   buzzer_init();
   buzzer_set_period(1000);
