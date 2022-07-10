@@ -19,3 +19,9 @@ load: button.elf
 
 clean:
 	rm -f *.o *.elf
+
+led.o: led.c led.h
+
+wdInterruptHandler.o: stateMachines.h
+
+stateMachines.o: led.h stateMachines.h
