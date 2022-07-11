@@ -29,10 +29,15 @@ void
 switch_interrupt_handler()
 {
   char p2val = switch_update_interrupt_sense();
-  switch_state_down = (p2val & SW1) ? 0 : 1; /* 0 when SW1 is up */
-  switch_state_down = (p2val & SW2) ? 0 : 1; /* 0 when SW2 is up */
-  switch_state_down = (p2val & SW3) ? 0 : 1; /* 0 when SW3 is up */
-  switch_state_down = (p2val & SW4) ? 0 : 1; /* 0 when SW4 is up */
+  char n_switch;
+  if((p2val & SW1) == 0)
+    n_switch = 0;
+  else if ((p2val & SW2) == 0)
+    n_switch = 1;
+  else if ((p2val & SW3) == 0)
+    n_switch = 2;
+  else if ((p2val & SW4) == 0)
+    n_switch = 3;
   switch_state_changed = 1;
   led_update();
 }
