@@ -4,6 +4,8 @@
 #include "switches.h"
 #include "buzzer.h"
 
+static char led_state = 0;
+
 char toggle_both()		/* always toggle! */
 {
   red_on = 1;
