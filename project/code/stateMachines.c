@@ -51,6 +51,7 @@ void change_led()
     led_state = 0;
     break;
   }
+  led_update();
 }
 
 void state_advance(n_switch)
