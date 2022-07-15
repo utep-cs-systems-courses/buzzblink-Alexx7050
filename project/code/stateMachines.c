@@ -54,8 +54,6 @@ void turn_off(){
 
 void state_advance(n_switch)
 {
- 
- char n_switch;
  switch(n_switch){
   case 0:
     toggle_red();
