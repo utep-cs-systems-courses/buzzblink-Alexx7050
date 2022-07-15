@@ -55,6 +55,7 @@ void state_advance()
      buzzer_set_period(6000);
     break;
   case 3:
+    turn_off();
     buzzer_set_period(0);
     break;
  } 
