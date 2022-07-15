@@ -42,6 +42,7 @@ void state_advance(n_switch)
     break;
   case 1:
     toggle_green();
+    buzzer_set_period(1000);
     break;
   case 2:
      toggle_both();
