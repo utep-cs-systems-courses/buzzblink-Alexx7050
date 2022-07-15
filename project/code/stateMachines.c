@@ -34,6 +34,23 @@ void turn_off(){
   led_update();
 }
 
+void change_led()
+{
+  switch (led_state) {
+  case (0):
+    P1OUT |= LED_GREEN;
+    led_state = 1;
+    break;
+  case (1):
+    P1OUT &= ~LED_GREEN;
+    led_state = 0;
+    break;
+  default:
+    led_state = 0;
+    break;
+  }
+}
+
 void state_advance(n_switch)
 {
  switch(n_switch){
@@ -42,6 +59,7 @@ void state_advance(n_switch)
     break;
   case 1:
     toggle_green();
+    change_led();
     buzzer_set_period(1000);
     break;
   case 2:
