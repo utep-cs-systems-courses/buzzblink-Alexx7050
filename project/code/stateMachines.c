@@ -50,7 +50,7 @@ void state_advance()
   case 2:
      toggle_red();
      toggle_green();
-     buzzer_set_period(3432);
+     buzzer_set_period(6000);
     break;
   case 3:
     buzzer_set_period(0);
