@@ -39,5 +39,5 @@ switch_interrupt_handler()
   else if ((p2val & SW4) == 0)
     n_switch = 3;
   switch_state_changed = 1;
-  state_advance();
+  state_advance(n_switch);
 }
