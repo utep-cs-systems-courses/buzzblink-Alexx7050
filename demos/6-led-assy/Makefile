@@ -24,9 +24,3 @@ load-s: led-s.elf
 
 clean:
 	rm -f *.o *.elf
-
-main.o: led.h
-greenControl-c.o: led.h
-wdInterruptHandler.o:  led.h
-
-green-on-c.o: led.h greenControl_c.c
