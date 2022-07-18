@@ -12,9 +12,9 @@ jt: .word default
     .extern n_switch
 
 state_advance:
-    ;; if (n_switch > 3) goto default
+    ;; if (n_switch > 3) goto dend
     cmp &n_switch, #3
-    jnc default
+    jnc end
     ;; PC = jt[n_switch]
     mov &n_switch, r12
     add r12, r12
