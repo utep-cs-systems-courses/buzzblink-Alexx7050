@@ -11,7 +11,8 @@ char toggle_both()		/* always toggle! */
   red_on = 1;
   green_on = 1;
   led_changed = 1;
-  led_update();			
+  led_update();	
+  buzzer_set_period(0);
 }
 
 
@@ -20,6 +21,7 @@ void toggle_green(){
   green_on = 1;
   led_changed = 1;
   led_update();
+  buzzer_set_period(1000);
 }
 
 void toggle_red(){
@@ -27,6 +29,7 @@ void toggle_red(){
   green_on = 0;
   led_changed = 1;
   led_update();
+  buzzer_set_period(6000);
 }
 
 void turn_off(){
@@ -34,4 +37,5 @@ void turn_off(){
   green_on = 0;
   led_changed = 1;
   led_update();
+  buzzer_set_period(0);
 }
