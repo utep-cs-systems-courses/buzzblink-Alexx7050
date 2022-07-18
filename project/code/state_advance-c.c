@@ -3,6 +3,7 @@
 #include "led.h"
 #include "switches.h"
 #include "buzzer.h"
+#include "state_advance.h"
 
 void state_advance(n_switch)
 {
