@@ -12,7 +12,7 @@ char toggle_both()		/* always toggle! */
   green_on = 1;
   led_changed = 1;
   led_update();	
-  buzzer_set_period(0);
+  buzzer_set_period(6000);
 }
 
 
@@ -29,7 +29,7 @@ void toggle_red(){
   green_on = 0;
   led_changed = 1;
   led_update();
-  buzzer_set_period(6000);
+  buzzer_set_period(0);
 }
 
 void turn_off(){
