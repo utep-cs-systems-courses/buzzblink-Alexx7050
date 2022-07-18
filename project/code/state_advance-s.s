@@ -2,8 +2,7 @@
     .p2align 1,0
 
     .text
-jt: .word default
-    .word case0
+jt: .word case0
     .word case1
     .word case2
     .word case3
