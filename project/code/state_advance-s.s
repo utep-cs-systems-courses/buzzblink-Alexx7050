@@ -29,6 +29,5 @@ case3:
     jmp end
 case4:
     call #turn_off
-    jmp end
 end:
     pop r0
