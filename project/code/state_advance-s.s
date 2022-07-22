@@ -2,10 +2,10 @@
     .p2align 1,0
     .text
     
-sw: .word case1
+sw: .word case0
+    .word case1
     .word case2
     .word case3
-    .word case4
 
     .global state_advance
     .extern n_switch
@@ -18,16 +18,16 @@ state_advance:
     mov &n_switch, r12
     add r12, r12
     mov sw(r12), r0
-case1:
+case0:
     call #toggle_red
     jmp end
-case2:
+case1:
     call #toggle_green
     jmp end
-case3:
+case2:
     call #toggle_both
     jmp end
-case4:
+case3:
     call #turn_off
     jmp end
 end:
