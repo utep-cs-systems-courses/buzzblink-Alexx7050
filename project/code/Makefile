@@ -31,4 +31,4 @@ switches.o: switches.c switches.h led.h buzzer.h
 stateMachines.o: led.h stateMachines.h buzzer.h
 buzzer.o: buzzer.h
 main.o: buzzer.h led.h switches.h
-state_advance-c.o: switches.h stateMachines.h select_SM.h
+state_advance-c.o: switches.h stateMachines.h state-advance.h
