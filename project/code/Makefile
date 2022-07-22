@@ -15,7 +15,7 @@ button-c.elf: ${COMMON_OBJECTS} state_advance-c.o ../lib/libTimer.a
 	${CC} ${CFLAGS} ${LDFLAGS} -o $@ $^
 	
 button-s.elf: ${COMMON_OBJECTS} state_advance-s.o ../lib/libTimer.a
-	${CC} ${CFLAGS} ${LDFLAGS} -o $@ $^
+	${AS} ${CFLAGS} ${LDFLAGS} -o $@ $^
 
 load: button-c.elf
 	msp430loader.sh button-c.elf
