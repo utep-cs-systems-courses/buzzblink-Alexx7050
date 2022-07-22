@@ -16,7 +16,7 @@ state_advance:
     jnc end
     ; PC = sw[n_switch]
     mov &n_switch, r12
-    add r12, sw(r12)
+    add r12, r12
     mov sw(r12), r0
 case1:
     call #toggle_red
