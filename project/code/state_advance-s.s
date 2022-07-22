@@ -19,16 +19,16 @@ state_advance:
     add r12, r12
     mov jt(r12), r0
 case0:
-    call #toggle_red()
+    call #toggle_red
     jmp end
 case1:
-    call #toggle_green()
+    call #toggle_green
     jmp end
 case2:
-    call #toggle_both()
+    call #toggle_both
     jmp end
 case3:
-    call #turn_off()
+    call #turn_off
     jmp end
 end:
     pop r0
