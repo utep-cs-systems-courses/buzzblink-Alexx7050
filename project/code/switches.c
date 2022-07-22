@@ -4,7 +4,7 @@
 #include "state_advance.h"
 
 char switch_state_down, switch_state_changed; /* effectively boolean */
-char n_switch;
+short n_switch;
 
 static char 
 switch_update_interrupt_sense()
