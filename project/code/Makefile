@@ -25,10 +25,3 @@ load-s: button-s.elf
 
 clean:
 	rm -f *.o *.elf
-	
-led.o: led.c led.h switches.h
-switches.o: switches.c switches.h led.h buzzer.h
-stateMachines.o: led.h stateMachines.h buzzer.h
-buzzer.o: buzzer.h
-main.o: buzzer.h led.h switches.h
-state_advance-s.o: switches.h stateMachines.h state_advance.h
