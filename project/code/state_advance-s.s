@@ -1,8 +1,9 @@
     .arch msp430g2553
     .p2align 1,0
-
     .text
-jt: .word case1
+    
+jt: .word default
+    .word case1
     .word case2
     .word case3
     .word case4
@@ -27,6 +28,7 @@ case2:
 case3:
     call #toggle_both
     jmp end
+default:
 case4:
     call #turn_off
     jmp end
