@@ -4,6 +4,7 @@
 #include "state_advance.h"
 
 char switch_state_down, switch_state_changed; /* effectively boolean */
+char n_switch;
 
 static char 
 switch_update_interrupt_sense()
@@ -30,7 +31,6 @@ void
 switch_interrupt_handler()
 {
   char p2val = switch_update_interrupt_sense();
-  char n_switch;
   if((p2val & SW1) == 0)
     n_switch = 0;
   else if ((p2val & SW2) == 0)
