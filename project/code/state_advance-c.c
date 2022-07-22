@@ -5,16 +5,16 @@
 void state_advance(n_switch)
 {
  switch(n_switch){
-  case 0:
+  case 1:
     toggle_red();
     break;
-  case 1:
+  case 2:
     toggle_green();
     break;
-  case 2:
+  case 3:
      toggle_both();
     break;
-  case 3:
+  case 4:
     turn_off();
     break;
  } 
