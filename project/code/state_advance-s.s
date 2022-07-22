@@ -11,10 +11,10 @@ jt: .word case1
     .extern n_switch
 
 state_advance:
-    ;; if (n_switch > 3) goto dend
-    cmp &n_switch, #3
+    ; if (n_switch > 4) goto dend
+    cmp &n_switch, #4
     jnc end
-    ;; PC = jt[n_switch]
+    ; PC = jt[n_switch]
     mov &n_switch, r12
     add r12, r12
     mov jt(r12), r0
