@@ -32,13 +32,13 @@ switch_interrupt_handler()
 {
   char p2val = switch_update_interrupt_sense();
   if((p2val & SW1) == 0)
-    n_switch = 0;
-  else if ((p2val & SW2) == 0)
     n_switch = 1;
-  else if ((p2val & SW3) == 0)
+  else if ((p2val & SW2) == 0)
     n_switch = 2;
-  else if ((p2val & SW4) == 0)
+  else if ((p2val & SW3) == 0)
     n_switch = 3;
+  else if ((p2val & SW4) == 0)
+    n_switch = 4;
   switch_state_changed = 1;
   state_advance(n_switch);
 }
