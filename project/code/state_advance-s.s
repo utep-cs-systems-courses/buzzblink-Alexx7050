@@ -2,7 +2,7 @@
     .p2align 1,0
     .text
     
-jt: .word case1
+sw: .word case1
     .word case2
     .word case3
     .word case4
@@ -14,10 +14,10 @@ state_advance:
     ; if (n_switch > 4) goto dend
     cmp &n_switch, #4
     jnc end
-    ; PC = jt[n_switch]
+    ; PC = sw[n_switch]
     mov &n_switch, r12
     add r12, r12
-    mov jt(r12), r0
+    mov sw(r12), r0
 case1:
     call #toggle_red
     jmp end
